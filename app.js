@@ -2,8 +2,10 @@
 
 function funEncriptar(x1){
     const vacio = [];
-   const regex = /[^a-zA-Z0-9A-Z]/g;
+   const regex = /([^a-zA-Z0-9])/g;
+   const regex2 = /([A-Z])/g;
     const found = x1.match(regex);
+    const found2 = x1.match(regex2);
 
     console.log(found);
 
@@ -15,13 +17,19 @@ function funEncriptar(x1){
        
         
     }else{
-        document.getElementById("advertencia").style.color= "black";
-        document.getElementById("advertencia").style.fontSize = "20px";
-    var cadena = x1.replace("a", "ai").replace("e", "enter").replace("i", "imes").replace("o", "ober").replace("u","ufat");
-   
-    document.getElementById("aDesencriptar").value= cadena;
-    document.getElementById("aEncriptar").value= "";
-    
+        if (found2 != null){
+            console.log("no permitido");
+            document.getElementById("advertencia").style.color= "yellow";
+            document.getElementById("advertencia").style.fontSize = "30px";
+            document.getElementById("aEncriptar").value= "";
+        }else{
+            document.getElementById("advertencia").style.color= "black";
+            document.getElementById("advertencia").style.fontSize = "20px";
+        var cadena = x1.replace("a", "bvc").replace("e", "test").replace("i", "rest").replace("o", "brda").replace("u","gest");
+       
+        document.getElementById("aDesencriptar").value= cadena;
+        document.getElementById("aEncriptar").value= "";
+        }
     }
     
     }
