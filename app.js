@@ -42,4 +42,21 @@ function funDesencriptar(x2){
     document.getElementById("aEncriptar").value= "";
 }
 
+function funCopiar(x3){
+console.log(x3);
+var text = x3;
+
+navigator.clipboard.writeText(x3)
+  .then(() => {
+    console.log('Texto copiado al portapapeles')
+    alert('Texto copiado al portapapeles')
+  })
+  .catch(err => {
+    console.error('Error al copiar al portapapeles:', err)
+  })
+
+
+
+}
+
    
