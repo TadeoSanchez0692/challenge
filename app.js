@@ -25,7 +25,7 @@ function funEncriptar(x1){
         }else{
             document.getElementById("advertencia").style.color= "black";
             document.getElementById("advertencia").style.fontSize = "20px";
-        var cadena = x1.replace("a", "ai").replace("e", "enter").replace("i", "imes").replace("o", "ober").replace("u","ufat");
+        var cadena = x1.replace("i", "imes").replace("e", "enter").replace("a", "ai").replace("o", "ober").replace("u","ufat");
        
         document.getElementById("aDesencriptar").value= cadena;
         document.getElementById("aEncriptar").value= "";
